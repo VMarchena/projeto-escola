@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { StudentListPage } from "../pages/student-list/student-list";
 import { AddStudentPage } from "../pages/add-student/add-student";
 import { SearchStudentPage } from "../pages/search-student/search-student";

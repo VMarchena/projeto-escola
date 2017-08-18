@@ -52,7 +52,6 @@
         </button>
       </ion-buttons>
     </div>
-    <!-- testat com let nota in ... -->
     <ion-item *ngFor = "let notas of student.notas; let i = index"(click)="editNota(i)">
       <h2> Disciplina: {{ notas.nome }} </h2>
       <h2> Nota: {{ notas.valor }} </h2>

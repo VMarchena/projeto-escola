@@ -11,9 +11,6 @@
   </ion-navbar>
 
 </ion-header>
-<!--
-  <ion-searchbar [(ngModel)]="myInput" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)"></ion-searchbar>
--->
 
 <ion-content padding>
     <ion-item *ngFor="let student of studentListRef | async" (click)="selectStudent(student)">

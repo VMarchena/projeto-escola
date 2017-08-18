@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController } from 'ionic-angular';
 import { Student } from "../../models/student/student.interface";
-import { FirebaseListObservable, AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { FirebaseListObservable, AngularFireDatabase } from 'angularfire2/database';
 import { EditStudentPage } from "../edit-student/edit-student";
 import { DetailStudentPage } from "../detail-student/detail-student";
 import { Subscription } from "rxjs/Subscription";
