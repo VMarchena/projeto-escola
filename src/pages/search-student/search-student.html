@@ -1,0 +1,38 @@
+<!--
+  Generated template for the SearchStudentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Buscar Estudante</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="primary" floating>Buscar por:</ion-label>
+    <ion-select [(ngModel)]="busca" multiple="false">
+      <ion-option>Nome</ion-option>
+      <ion-option>CPF</ion-option>
+      <ion-option>Matricula</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-searchbar [(ngModel)]="parametro"></ion-searchbar>
+  <ion-item *ngFor="let student of studentListRef | async" (click)="selectStudent(student)">
+    <!--Repetir pela quantidade de itens no meu banco de dados -->
+    <h2> Nome: {{ student.nome }} </h2>
+    <h3> Matrícula: {{ student.matricula }} </h3>
+    <h3> CPF: {{ student.cpf }} </h3>
+  </ion-item>
+</ion-content>
+
+
+<ion-footer padding>
+  <button ion-button block color="danger" (click)="cleanSearch()">Limpar Busca</button>
+  <button ion-button block color="secondary" (click)="searchStudent(busca,parametro)">Realizar Busca</button>
+</ion-footer>
